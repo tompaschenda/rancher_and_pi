@@ -1,0 +1,26 @@
+
+# ToPa, 2020-Mai-04: Generated this file using "helm show values rancher-latest/rancher > rancher_helm_config.yaml"
+# Fully qualified name to reach your Rancher server
+hostname: rancher.example.org
+
+### ingress ###
+# Readme for details and instruction on adding tls secrets.
+ingress:
+  tls:
+    # options: rancher, letsEncrypt, secret
+    source: letsEncrypt
+
+### LetsEncrypt config ###
+# ProTip: The production environment only allows you to register a name 5 times a week.
+#         Use staging until you have your config right.
+letsEncrypt:
+  email: mail@example.com
+
+# Override rancher image location for Air Gap installs
+#rancherImage: rancher/rancher
+# rancher/rancher image tag. https://hub.docker.com/r/rancher/rancher/tags/
+# Defaults to .Chart.appVersion
+#rancherImageTag: v2.4.2-linux-arm64
+
+# Number of Rancher server replicas.
+replicas: 1

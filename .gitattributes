@@ -1,0 +1,10 @@
+# This file prevents git from changing line endings in .sh files to CRLF (Windows Format)
+# See here: https://help.github.com/en/github/using-git/configuring-git-to-handle-line-endings
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# Declare files that will always have LF (line feed) line endings on checkout.
+# Bash scripts should always have LF only (to be used on Linux)
+kubeconfig text eol=lf
+*.sh text eol=lf
+scripts/* eol=lf
