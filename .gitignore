@@ -1,3 +1,4 @@
 .vagrant/
 rancher_helm_config.yaml
 *.log
+kubeconfig
